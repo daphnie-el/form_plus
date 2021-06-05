@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react';
 import './App.css';
 import Templates from './app/index';
 
 function App() {
-  return (
-    <Templates />
-  );
+  return <Templates />;
 }
 
 export default App;
