@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App]
+This project was bootstrapped with [Create React App] and styled with [styled-components](https://styled-components.com/)
 
 ## Pagination and Testing
  Pagination was handled with [makotot paginated](https://www.npmjs.com/package/@makotot/paginated) while testing was done with [Cypress](https://www.cypress.io/).
@@ -18,6 +18,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+
+App would display 'No Result' if there is a CORS error
 
 
 ### `yarn build`
