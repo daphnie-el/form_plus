@@ -24,7 +24,7 @@ const InputContainer = styled.div`
     display: block;
     outline: none;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 500px) {
     width: 100%;
     padding: 0.625rem 0;
   }
