@@ -1,6 +1,6 @@
-
+import React from "react";
 import './App.css';
-import Templates from './app/templates';
+import Templates from './app/index';
 
 function App() {
   return (

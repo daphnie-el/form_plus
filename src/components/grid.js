@@ -11,15 +11,7 @@ const Grid = styled.div`
       gap: ${(props) => props.gap};
     `
   }
-  & input {
-      width: 18.75rem;
-      height: 2.5rem;
-      border: 0.5px solid #BDBDBD;
-
-      &::placeholder {
-        padding-left: 30px;
-      }
-  }
+ 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }

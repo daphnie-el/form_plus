@@ -30,15 +30,17 @@ const InputContainer = styled.div`
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
   }
 `
-const Select = ({label, options=[]}) => {
+const Select = ({label, options=[], onChange}) => {
   return (
     <InputContainer>
         <label className="label">{label}</label>
-        <select className="select-dropdown" placeholder="select item">
+        <select onChange={onChange} className="select-dropdown" placeholder="select item">
           {
-            options.map(childOption => {
+            options.map((childOption, index) => {
               return (
-                <option value={childOption.value}>{childOption.label}</option>
+                <option value={childOption.value} data-cy={childOption.value} key={index}>
+                  {childOption.label}
+                </option>
               )
             })
           }

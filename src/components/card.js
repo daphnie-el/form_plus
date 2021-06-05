@@ -5,11 +5,12 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 14.3125rem;
+  height: 100%;
   padding-top: 1.25rem; 
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
   border-radius: 2px;
+  margin: ${(props) => props.margin};
 
   &:hover {
      

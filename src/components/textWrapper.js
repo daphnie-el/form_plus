@@ -11,6 +11,8 @@ const Text = styled.p`
       color: #08BD37;
       text-decoration: none;
     }
+
+    border: ${props => props.borderText ? '1px solid #3F3F3' : 'none' };
 `;
 
 export default Text;
