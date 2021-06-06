@@ -90,6 +90,7 @@ const Templates = (props) => {
         const { data } = response;
         setResponse(data);
         setTemplateData(data);
+        setSearchData(data)
         setTotalPages(getTotalPages(data.length));
       } catch (error) {
         console.error(error);
@@ -131,6 +132,7 @@ const Templates = (props) => {
 
     if (value === 'All') {
       setTemplateData(res);
+      setSearchData(res)
     } else {
       setTemplateData(filteredData);
       setSearchData(filteredData)
