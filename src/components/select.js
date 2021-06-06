@@ -23,6 +23,7 @@ const InputContainer = styled.div`
     width: 100%;
     display: block;
     outline: none;
+    background-color: #fff;
   }
   @media (max-width: 500px) {
     width: 100%;

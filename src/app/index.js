@@ -12,7 +12,6 @@ import {
 import icon from '../assets/icon.svg';
 import axios from 'axios';
 import { usePaginated } from '@makotot/paginated';
-import debounce from 'lodash/debounce';
 
 const category = [
   {
@@ -72,7 +71,7 @@ const Templates = (props) => {
   const [filterLabel, setFilterLabel] = useState('All');
   const [_currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [_data, setData] = useState([]);
+  const [searchData, setSearchData] = useState([]);
 
   function getTotalPages(count) {
     return Math.ceil(count / 15);
@@ -107,7 +106,7 @@ const Templates = (props) => {
   );
 
   function handleSearchTemplates(e) {
-    const searchResult = templateData.filter((data) => {
+    const searchResult = searchData.filter((data) => {
       let searchInput = e.target.value;
       return data.name.toLowerCase().includes(searchInput.toLowerCase());
     });
@@ -132,8 +131,10 @@ const Templates = (props) => {
 
     if (value === 'All') {
       setTemplateData(res);
+      setSearchData(res)
     } else {
       setTemplateData(filteredData);
+      setSearchData(filteredData)
     }
 
     clearTimeout(timeout);
@@ -247,7 +248,6 @@ const Templates = (props) => {
           placeholder="Search Templates"
           onKeyUp={(e) => {
             setIsLoading(true);
-            handleFilterByCategory(filterLabel);
             clearTimeout(timeout);
             timeout = setTimeout(() => {
               handleSearchTemplates(e);

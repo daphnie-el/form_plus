@@ -2,8 +2,6 @@
 
 This project was bootstrapped with [Create React App] and styled with [styled-components](https://styled-components.com/)
 
-## Incomplete Task
-I eould not complete the project as the server stopped responding.
 ## Pagination and Testing
  Pagination was handled with [makotot paginated](https://www.npmjs.com/package/@makotot/paginated) while testing was done with [Cypress](https://www.cypress.io/).
 
