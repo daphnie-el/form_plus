@@ -71,7 +71,7 @@ const Templates = (props) => {
   const [filterLabel, setFilterLabel] = useState('All');
   const [_currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [searchData, setSearchData] = useState([]);
+  const [searchData, setSearchData] = useState(res);
 
   function getTotalPages(count) {
     return Math.ceil(count / 15);
@@ -131,7 +131,6 @@ const Templates = (props) => {
 
     if (value === 'All') {
       setTemplateData(res);
-      setSearchData(res)
     } else {
       setTemplateData(filteredData);
       setSearchData(filteredData)
