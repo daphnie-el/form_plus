@@ -187,18 +187,13 @@ const Templates = (props) => {
 
     if (e.target.value === 'Ascending') {
       sortedData = templateData?.slice().sort((a, b) => {
-        if (new Date(a.created).valueOf() < new Date(a.created).valueOf())
-          return -1;
-        return new Date(a.created).valueOf() > new Date(a.created).valueOf()
-          ? 1
-          : 0;
-      });
+      (new Date(a.created).valueOf() > new Date(b.created).valueOf()) ? 1 : -1
     }
     if (e.target.value === 'Descending') {
       sortedData = templateData?.slice().sort((a, b) => {
-        if (new Date(a.created).valueOf() > new Date(a.created).valueOf())
+        if (new Date(a.created).valueOf() > new Date(b.created).valueOf())
           return -1;
-        return new Date(a.created).valueOf() < new Date(a.created).valueOf()
+        return new Date(a.created).valueOf() < new Date(b.created).valueOf()
           ? 1
           : 0;
       });
